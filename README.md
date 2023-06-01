@@ -1,6 +1,20 @@
 # Axopen - Power Benchmark
 
-## Lancement du projet
+
+Ce projet fait partie de l'étude de la consommation énergétique des frameworks
+de développement en conditions réelles.
+
+Des informations sur le protocole utilisé pour les tests se trouve [ici](https://github.com/axopen-power-benchmark/setup-benchmark)
+
+## Dépendances
+
+Pour compiler le projet les dépendances suivantes doivent être installé :
+
+```shell
+java
+```
+
+## Configuration
 
 Pouvoir lancer l'API vous devez modifier les fichiers de configuration pour que l'API pointe sur votre base de données.
 
@@ -18,6 +32,14 @@ spring.datasource.password=DB_PASSWORD
 ```
 
 Vous pouvez maintenant lancer l'application.
+
+## Compilation
+
+Vous pouvez compiler l'application avec la commande
+`.\mvnw package`
+
+Un .jar sera générer dans le dossier target `powerbenchmark-0.0.1-SNAPSHOT.jar`
+que l'on peut lancer avec `java -jar`
 
 ## Architecture du projet
 
@@ -38,3 +60,14 @@ Le repertoire suivant va contenir les ressources de l'application : `/src/main/r
 
 - `application.properties` contient les propriétés liées à l'API, les paramètres de connexion à la base de données ...
 - `db/migration` contient les scripts de migration qui permettent de construire automatiquement la base de données au lancement de l'API.
+
+
+## Routes
+
+### GET /api/chantier
+
+Retourne un chantier random en mode eager
+
+### POST /api/chantier
+
+Update un chantier random avec des valeurs random et retourne le chantier updater
