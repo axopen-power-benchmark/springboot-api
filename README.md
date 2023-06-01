@@ -41,6 +41,9 @@ Vous pouvez compiler l'application avec la commande
 Un .jar sera générer dans le dossier target `powerbenchmark-0.0.1-SNAPSHOT.jar`
 que l'on peut lancer avec `java -jar`
 
+Vous pouvez sinon directement lancer le projet avec la commande suivante : 
+`./mvnw spring-boot:run`
+
 ## Architecture du projet
 
 Le code java qui va permettre à l'API de fonctionner se trouve dans le repertoire : `/src/main/java/fr/axopen/powerbenchmark`.
